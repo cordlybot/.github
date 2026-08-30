@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# Binary brand assets must never be line-ending normalized.
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff2 binary

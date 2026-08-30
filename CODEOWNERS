@@ -1,0 +1,17 @@
+# Default review ownership for the Cordly organization-health repository.
+# Files here become defaults for every repository in the organization, so every
+# change requires an explicit review.
+
+* @isaacwallace123
+
+# High-risk shared surfaces. Listed separately so ownership survives any future
+# change to the catch-all rule above.
+
+/.github/workflows/       @isaacwallace123
+/.github/ISSUE_TEMPLATE/  @isaacwallace123
+/.github/dependabot.yml   @isaacwallace123
+/SECURITY.md              @isaacwallace123
+/CODE_OF_CONDUCT.md       @isaacwallace123
+/GOVERNANCE.md            @isaacwallace123
+/LICENSE                  @isaacwallace123
+/CODEOWNERS               @isaacwallace123

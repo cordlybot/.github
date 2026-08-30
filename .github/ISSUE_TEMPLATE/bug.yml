@@ -1,0 +1,58 @@
+name: Bug report
+description: Report reproducible incorrect behavior in a Cordly repository.
+title: "[Bug]: "
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include secrets, personal data, private Discord content, or security vulnerabilities.
+  - type: input
+    id: repository
+    attributes:
+      label: Repository and version
+      description: Repository name plus commit, image digest, tag, or release.
+      placeholder: cordly-bot at abc1234
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include sanitized configuration and exact steps.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime/toolchain, Docker/Kubernetes, and relevant dependencies.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized evidence
+      description: Correlation IDs, errors, or logs with sensitive data removed.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched for an existing issue.
+          required: true
+        - label: This report contains no secrets, personal data, or private server content.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

@@ -1,0 +1,35 @@
+name: Organization health CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: org-health-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  yaml:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Parse YAML
+        shell: ruby {0}
+        run: |
+          require "yaml"
+          Dir.glob("**/*.{yml,yaml}", File::FNM_DOTMATCH).sort.each do |path|
+            YAML.safe_load_file(path, permitted_classes: [], permitted_symbols: [], aliases: false)
+            puts "valid #{path}"
+          end
+      - name: Check required community files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for path in README.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md SUPPORT.md GOVERNANCE.md LICENSE CODEOWNERS profile/README.md profile/assets/cordly-mark.png; do
+            test -s "$path"
+          done

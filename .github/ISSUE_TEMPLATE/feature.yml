@@ -1,0 +1,46 @@
+name: Feature proposal
+description: Propose a user outcome or platform capability.
+title: "[Feature]: "
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and users
+      description: Describe the problem, affected users, and evidence without prescribing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: State observable acceptance criteria.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary area
+      options:
+        - Bot / Discord runtime
+        - API / control plane
+        - AI / retrieval and planning
+        - Knowledge/templates/evaluations
+        - Cloud operations
+        - Panel
+        - Marketing
+        - Documentation
+        - Cross-repository
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Security, privacy, safety, and Discord impact
+      description: Include permissions, tenant boundaries, destructive behavior, AI failure modes, and data handling.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and trade-offs

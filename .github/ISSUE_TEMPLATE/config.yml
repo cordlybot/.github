@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/cordlybot/.github/blob/main/SECURITY.md
+    about: Report vulnerabilities privately. Never open a public security issue.
+  - name: Questions and setup help
+    url: https://cordly.gg/discord
+    about: Ask in the Cordly Discord. Beginner questions are welcome.
+  - name: Support guidance
+    url: https://github.com/cordlybot/.github/blob/main/SUPPORT.md
+    about: Not sure where something belongs? Start here.
+  - name: Contributing guide
+    url: https://github.com/cordlybot/.github/blob/main/CONTRIBUTING.md
+    about: How to propose, build, and land a change.
+  - name: Cordly website
+    url: https://cordly.gg
+    about: Product information and project updates.

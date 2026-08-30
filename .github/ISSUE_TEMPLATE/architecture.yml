@@ -1,0 +1,30 @@
+name: Architecture decision
+description: Propose a cross-repository boundary, trust, or compatibility decision.
+title: "[Architecture]: "
+labels: [architecture, triage]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and decision pressure
+    validations:
+      required: true
+  - type: textarea
+    id: repositories
+    attributes:
+      label: Affected repositories and owners
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options and evidence
+      description: Include the status quo and operational/security consequences.
+    validations:
+      required: true
+  - type: textarea
+    id: contracts
+    attributes:
+      label: Contract, data, migration, and rollback impact
+    validations:
+      required: true
