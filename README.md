@@ -75,7 +75,7 @@ For stricter supply-chain guarantees, pin the exact commit instead. Resolve the
 SHA behind a tag with:
 
 ```bash
-git ls-remote https://github.com/cordlybot/.github refs/tags/v1
+git ls-remote https://github.com/cordlybot/.github 'refs/tags/v1^{}'
 ```
 
 then reference it with the tag retained as a trailing comment:
